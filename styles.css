@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+  }
+  :root {
+    --line-border-fill: #3498db;
+  }
+  body {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 90vh;
+  }
+  .container {
+    text-align: center;
+  }
+  .progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    max-width: 100%;
+  }
+  .circle.active {
+    border-color: var(--line-border-fill);
+  }
+  .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid black;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    background-color: aliceblue;
+  }
+  
+  .progress-container::before {
+    content: "";
+    background-color: lightgray;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    max-width: 350px;
+  }
+  
+  .progress-line{
+    position: absolute;   
+  }
